@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { MyContext } from './App'
+import { MyContext } from './context'
 
 export default function GrandChildOne() {
     const {setUser,user} = useContext(MyContext)

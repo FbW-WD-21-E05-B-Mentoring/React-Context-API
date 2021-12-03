@@ -1,20 +1,18 @@
 
-import React, { createContext, useState } from 'react';
+import React from 'react';
 import ChildOne from './ChildOne';
 import ChildTwo from './ChildTwo';
-
-export const MyContext = createContext()
+import Container from './Container';
 
 function App() {
-  const [user,setUser] = useState({name:"Joseph",age:23})
   return (
-    <MyContext.Provider value={{user, setUser}}> 
+   <Container>
     <div className="App">
       <h1>Context API</h1>
       <ChildOne/>
       <ChildTwo/>
     </div>
-    </MyContext.Provider>
+   </Container>
   );
 }
 

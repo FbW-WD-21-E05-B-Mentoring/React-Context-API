@@ -1,5 +1,5 @@
 import React,{useContext} from "react";
-import { MyContext } from "./App.js";
+import { MyContext } from "./context";
 
 
 export default function GrandChildTwo() {
