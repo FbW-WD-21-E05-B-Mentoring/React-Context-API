@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { MyContext } from './App'
 
-export default function GrandChildOne({setUser}) {
+export default function GrandChildOne() {
+    const {setUser,user} = useContext(MyContext)
     return (
         <div>
             <h3>Child in Child One component and grandchild for App component</h3>
-            <button onClick={()=>setUser((user)=>({...user,age:user.age+1 }))}>increment student age</button>
+            <button onClick={()=>setUser({...user,age:user.age+1})}>increment student age</button>
 
-           {/*  <button onClick={()=>setUser((user)=>{return {...user,age:user.age+1 }})}>increment student age</button> */}
+          
         </div>
     )
 }
